@@ -3,8 +3,8 @@ extends Node3D
 #* Declare variables for movement speed and rotation speed
 var speed: float = 0.0
 var rotation_speed: float = 2.0
-var acceleration: float = 5.0
-var max_speed: float = 100.0
+var acceleration: float = 200.0
+var max_speed: float = 10000.0
 var damping: float = 0.9
 
 
@@ -47,4 +47,11 @@ func _process(delta: float) -> void:
 	
 	rotate_x(-Input.get_action_strength("Pitch_down") * rotation_speed * delta)
 	rotate_x(Input.get_action_strength("Pitch_up") * rotation_speed * delta)
+	
+	# Reference to the camera node
+#var camera_node: Camera = $/root/executioner/Camera3D  # Adjust the node path based on your scene structure
+
+# Set the camera's target to the spaceship
+#camera_node.target = self
+
 	

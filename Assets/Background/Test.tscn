@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://q7b2cugcaq75"]
+[gd_scene load_steps=8 format=3 uid="uid://q7b2cugcaq75"]
 
 [ext_resource type="Texture2D" uid="uid://d3fkfjgvjw4gt" path="res://Assets/Background/panorama6.jpg" id="1_hbuc6"]
 [ext_resource type="PackedScene" uid="uid://dua4hoqa5g7ie" path="res://node_3d.tscn" id="2_dmudy"]
 [ext_resource type="PackedScene" uid="uid://2c8138ba5wjn" path="res://Assets/Spaceship/Scenes/executioner.tscn" id="3_nlttx"]
+[ext_resource type="Script" path="res://Assets/Background/CameraFollow.gd" id="4_4bnqs"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jprl"]
 panorama = ExtResource("1_hbuc6")
@@ -34,13 +35,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -384.807, 6401.01, 13664.8)
 
 [node name="Node3D" parent="Node3D" instance=ExtResource("2_dmudy")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999496, -0.0189452, -0.0254649, 0.0259941, 0.948985, 0.314248, 0.0182123, -0.314752, 0.948999, -10.8433, 42.0222, 39.4238)
-fov = 81.5625
-far = 80000.0
-
 [node name="Executioner" parent="." instance=ExtResource("3_nlttx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.23378, 34.4103, 21.3298)
+
+[node name="Camera3D" type="Camera3D" parent="Executioner"]
+transform = Transform3D(0.999496, -0.0189452, -0.0254649, 0.0259941, 0.948985, 0.314248, 0.0182123, -0.314752, 0.948999, -0.302521, 7.72972, 9.93425)
+fov = 81.5625
+far = 80000.0
+script = ExtResource("4_4bnqs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3942, 1013.93, 2851.25)
