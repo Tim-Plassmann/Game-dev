@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://q7b2cugcaq75"]
+[gd_scene load_steps=7 format=3 uid="uid://q7b2cugcaq75"]
 
 [ext_resource type="Texture2D" uid="uid://d3fkfjgvjw4gt" path="res://Assets/Background/panorama6.jpg" id="1_hbuc6"]
 [ext_resource type="PackedScene" uid="uid://dua4hoqa5g7ie" path="res://node_3d.tscn" id="2_dmudy"]
 [ext_resource type="PackedScene" uid="uid://2c8138ba5wjn" path="res://Assets/Spaceship/Scenes/executioner.tscn" id="3_nlttx"]
-[ext_resource type="Script" path="res://Assets/Spaceship/Scenes/executioner.gd" id="4_238mn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jprl"]
 panorama = ExtResource("1_hbuc6")
@@ -25,8 +24,6 @@ adjustment_brightness = 1.05
 adjustment_contrast = 1.05
 adjustment_saturation = 1.3
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_oo21u"]
-
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -44,8 +41,6 @@ far = 80000.0
 
 [node name="Executioner" parent="." instance=ExtResource("3_nlttx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.23378, 34.4103, 21.3298)
-script = ExtResource("4_238mn")
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(0.999496, -0.0189452, -0.0254649, 0.0259941, 0.948985, 0.314248, 0.0182123, -0.314752, 0.948999, -10.8433, 51.0222, 32.4238)
-camera_attributes = SubResource("CameraAttributesPractical_oo21u")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 233.31, 0)
