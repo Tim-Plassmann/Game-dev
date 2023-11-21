@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqchnwrmmv28r"
+path="res://.godot/imported/Spitfire.obj-8b4418baf2162e19675d6cbce4e40511.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Spitfire.obj-8b4418baf2162e19675d6cbce4e40511.mesh"]
+
+source_file="res://Assets/Spaceship/Spitfire/OBJ/Spitfire.obj"
+dest_files=["res://.godot/imported/Spitfire.obj-8b4418baf2162e19675d6cbce4e40511.mesh", "res://.godot/imported/Spitfire.obj-8b4418baf2162e19675d6cbce4e40511.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://q7b2cugcaq75"]
+[gd_scene load_steps=9 format=3 uid="uid://q7b2cugcaq75"]
 
 [ext_resource type="Texture2D" uid="uid://d3fkfjgvjw4gt" path="res://Assets/Background/panorama6.jpg" id="1_hbuc6"]
+[ext_resource type="PackedScene" uid="uid://dua4hoqa5g7ie" path="res://node_3d.tscn" id="2_dmudy"]
+[ext_resource type="PackedScene" uid="uid://2c8138ba5wjn" path="res://Assets/Spaceship/Scenes/executioner.tscn" id="3_nlttx"]
+[ext_resource type="Script" path="res://Assets/Spaceship/Scenes/executioner.gd" id="4_238mn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jprl"]
 panorama = ExtResource("1_hbuc6")
@@ -22,7 +25,9 @@ adjustment_brightness = 1.05
 adjustment_contrast = 1.05
 adjustment_saturation = 1.3
 
-[node name="Test" type="Node3D"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_oo21u"]
+
+[node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_470jn")
@@ -30,9 +35,17 @@ environment = SubResource("Environment_470jn")
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -384.807, 6401.01, 13664.8)
 
+[node name="Node3D" parent="Node3D" instance=ExtResource("2_dmudy")]
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999779, -7.86202e-10, -0.0210122, 0.00793383, 0.925976, -0.377499, 0.0194568, -0.377582, -0.925772, -10.8433, 42.0222, 39.4238)
-fov = 36.9643
+transform = Transform3D(0.999496, -0.0189452, -0.0254649, 0.0259941, 0.948985, 0.314248, 0.0182123, -0.314752, 0.948999, -10.8433, 42.0222, 39.4238)
+fov = 81.5625
 far = 80000.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+[node name="Executioner" parent="." instance=ExtResource("3_nlttx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.23378, 34.4103, 21.3298)
+script = ExtResource("4_238mn")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+transform = Transform3D(0.999496, -0.0189452, -0.0254649, 0.0259941, 0.948985, 0.314248, 0.0182123, -0.314752, 0.948999, -10.8433, 51.0222, 32.4238)
+camera_attributes = SubResource("CameraAttributesPractical_oo21u")

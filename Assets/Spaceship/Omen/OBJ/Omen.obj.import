@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbl45d2mr3b7m"
+path="res://.godot/imported/Omen.obj-d187a944ae07acfc9d8798c01b44002c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Omen.obj-d187a944ae07acfc9d8798c01b44002c.mesh"]
+
+source_file="res://Assets/Spaceship/Omen/OBJ/Omen.obj"
+dest_files=["res://.godot/imported/Omen.obj-d187a944ae07acfc9d8798c01b44002c.mesh", "res://.godot/imported/Omen.obj-d187a944ae07acfc9d8798c01b44002c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

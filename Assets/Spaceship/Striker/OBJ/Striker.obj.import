@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crj3yvw4afo5o"
+path="res://.godot/imported/Striker.obj-3ee09ef3472fdf5d382a2c4b7526ec5a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Striker.obj-3ee09ef3472fdf5d382a2c4b7526ec5a.mesh"]
+
+source_file="res://Assets/Spaceship/Striker/OBJ/Striker.obj"
+dest_files=["res://.godot/imported/Striker.obj-3ee09ef3472fdf5d382a2c4b7526ec5a.mesh", "res://.godot/imported/Striker.obj-3ee09ef3472fdf5d382a2c4b7526ec5a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

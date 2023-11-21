@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://2c8138ba5wjn"]
+
+[ext_resource type="PackedScene" uid="uid://bgx3dy6pr0sy7" path="res://Assets/Spaceship/Executioner/Executioner.gltf" id="1_8fxou"]
+[ext_resource type="Script" path="res://Assets/Spaceship/Scenes/executioner.gd" id="1_d0xwg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n65ko"]
+size = Vector3(10.0375, 2.45419, 11.0319)
+
+[node name="Executioner" type="Node3D"]
+script = ExtResource("1_d0xwg")
+
+[node name="Executioner" parent="." instance=ExtResource("1_8fxou")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.183389, 4.76837e-07, -0.485354)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.169495, 0.0295248, -2.01796)
+shape = SubResource("BoxShape3D_n65ko")
